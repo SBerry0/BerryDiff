@@ -1,8 +1,9 @@
 Name: Sohum Berry
 
-| Date    |   Time    |                                                                                                                                                                                             Update |
-|:--------|:---------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| 2/24/25 | 2:30-3:00 | I spent some time brainstorming and made a plan on the board. I just spent the last 20 or so minutes writing the corresponding code. It's looking good in my head, but I have no clue how it runs. |
+| Date    |    Time     |                                                                                                                                                                                                                                                                                                                                                                                                 Update |
+|:--------|:-----------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 2/24/25 | 2:30-3:00pm |                                                                                                                                                                                                     I spent some time brainstorming and made a plan on the board. I just spent the last 20 or so minutes writing the corresponding code. It's looking good in my head, but I have no clue how it runs. |
+| 2/25/25 | 8:00-9:00pm | I finished up the code for my first idea, but when I test it, it only passes the correct small and the test tricky. What makes me think that I'm not on the right track is that if I switch the order that the texts are inputted to the program, the output of the substring is different. I think this is an issue due to the nature of the idea, so I'm going to attempt Sabrina's tabulation idea. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
