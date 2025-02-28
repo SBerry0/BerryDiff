@@ -16,14 +16,17 @@ public class PlagiarismChecker {
 
     public static int longestSharedSubstring(String doc1, String doc2) {
         // Storing the lengths of the indices connecting text one to text two
-        int[][] memoizationBoard = new int[doc2.length()][doc1.length()];
-
+        int[][] board = new int[doc1.length()+1][doc2.length()+1];
         for (int i = 1; i < doc1.length(); i++) {
-
-            
+            for (int j = 1; j < doc2.length(); j++) {
+                board[i][j] += Math.max(board[i-1][j], board[i][j-1]);
+                if (doc1.charAt(i-1) == doc2.charAt(j-1) && i <= board[i][j] && j <= board[i][j]) {
+                    board[i][j] += 1;
+                }
+            }
         }
-
-        return recursive(doc2, doc1, 0, 0, memoizationBoard);
+        return board[doc1.length()][doc2.length()];
+//        return recursive(doc2, doc1, 0, 0, memoizationBoard);
     }
 
     public static int recursive(String text1, String text2, int idx1, int idx2, int[][] memoizationBoard) {
