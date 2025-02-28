@@ -17,10 +17,10 @@ public class PlagiarismChecker {
     public static int longestSharedSubstring(String doc1, String doc2) {
         // Storing the lengths of the indices connecting text one to text two
         int[][] board = new int[doc1.length()+1][doc2.length()+1];
-        for (int i = 1; i < doc1.length(); i++) {
-            for (int j = 1; j < doc2.length(); j++) {
+        for (int i = 1; i < doc1.length()+1; i++) {
+            for (int j = 1; j < doc2.length()+1; j++) {
                 board[i][j] += Math.max(board[i-1][j], board[i][j-1]);
-                if (doc1.charAt(i-1) == doc2.charAt(j-1) && i <= board[i][j] && j <= board[i][j]) {
+                if (doc1.charAt(i-1) == doc2.charAt(j-1) && i > board[i][j] && j > board[i][j]) {
                     board[i][j] += 1;
                 }
             }
