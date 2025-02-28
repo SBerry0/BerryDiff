@@ -20,7 +20,7 @@ public class PlagiarismChecker {
         for (int i = 1; i < doc1.length()+1; i++) {
             for (int j = 1; j < doc2.length()+1; j++) {
                 board[i][j] += Math.max(board[i-1][j], board[i][j-1]);
-                if (doc1.charAt(i-1) == doc2.charAt(j-1) && i > board[i][j] && j > board[i][j]) {
+                if (doc1.charAt(i-1) == doc2.charAt(j-1) && i >= board[i][j] && j >= board[i][j]) {
                     board[i][j] += 1;
                 }
             }
